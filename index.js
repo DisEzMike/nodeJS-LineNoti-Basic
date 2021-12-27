@@ -42,7 +42,11 @@ app.post("/", function (req, res) {
       sendLine(tokenList, message);
     }
 
-    res.json({ code: 200, message: "success", data: tokenList });
+    res.json({
+      code: 200,
+      message: "success",
+      data: { message: message, token: tokenList },
+    });
   } catch (error) {
     console.log("Request error");
     res.json({
