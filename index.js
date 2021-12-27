@@ -45,7 +45,6 @@ app.post("/", function (req, res) {
     res.json({
       code: 200,
       message: "success",
-      data: { message: message, token: tokenList },
     });
   } catch (error) {
     console.log("Request error");
@@ -75,9 +74,5 @@ function sendLine(token = "", message = "") {
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
     console.log(body);
-    console.log({
-      message: message,
-      token: token,
-    });
   });
 }
