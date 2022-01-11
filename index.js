@@ -15,8 +15,8 @@ const corsOptions = {
   ],
   credentials: true,
 };
-app.use(bodyParser.json({limit: '2000mb'}));
-app.use(bodyParser.urlencoded({limit: '2000mb', extended: true}));
+app.use(bodyParser.json({limit: '500mb'}));
+app.use(bodyParser.urlencoded({limit: '500mb', extended: true}));
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
