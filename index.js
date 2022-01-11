@@ -57,6 +57,26 @@ app.post("/", function (req, res) {
   }
 });
 
+app.get(
+  ["/cache/localhost", "/cache/sandbox", "/cache/dexystore"],
+  (req, res) => {
+    res.json({
+      code: 405,
+      message: "Method not allowed",
+    });
+  }
+);
+
+app.put(
+  ["/cache/localhost", "/cache/sandbox", "/cache/dexystore"],
+  (req, res) => {
+    res.json({
+      code: 200,
+      message: "success",
+    });
+  }
+);
+
 // start the server
 app.listen(port);
 console.log("Server started! At http://localhost:" + port);
