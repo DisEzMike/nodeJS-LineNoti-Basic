@@ -74,7 +74,7 @@ app.put(
       code: 200,
       message: "success",
     });
-    console.log(req.body.body);
+    console.log(req.body);
   }
 );
 
