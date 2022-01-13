@@ -31,7 +31,7 @@ app.post("/", function (req, res) {
   try {
     console.log("received request");
     let message = req.body.message;
-    let tokenList = req.body["token[]"];
+    let tokenList = req.body.token;
     let isArray = Array.isArray(tokenList);
 
     console.log(req.body);
